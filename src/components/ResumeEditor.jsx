@@ -9,6 +9,7 @@ function BasicInfoInput({ basicInfo, onChange }) {
           name="name"
           value={basicInfo.name}
           onChange={(e) => onChange("name", e.target.value)}
+          required
         />
       </label>
       <label>
@@ -17,6 +18,7 @@ function BasicInfoInput({ basicInfo, onChange }) {
           name="email"
           value={basicInfo.email}
           onChange={(e) => onChange("email", e.target.value)}
+          required
         />
       </label>
       <label>
@@ -25,6 +27,7 @@ function BasicInfoInput({ basicInfo, onChange }) {
           name="intro"
           value={basicInfo.intro}
           onChange={(e) => onChange("intro", e.target.value)}
+          required
         />
       </label>
     </div>
@@ -40,6 +43,7 @@ function WorkInputItem({ work, onChange }) {
           name="company"
           value={work.company}
           onChange={(e) => onChange("company", e.target.value)}
+          required
         />
       </label>
       <label>
@@ -48,6 +52,7 @@ function WorkInputItem({ work, onChange }) {
           name="title"
           value={work.title}
           onChange={(e) => onChange("title", e.target.value)}
+          required
         />
       </label>
       <label>
@@ -56,6 +61,7 @@ function WorkInputItem({ work, onChange }) {
           name="startTime"
           value={work.startTime}
           onChange={(e) => onChange("startTime", e.target.value)}
+          required
         />
       </label>
       <label>
@@ -64,6 +70,7 @@ function WorkInputItem({ work, onChange }) {
           name="endTime"
           value={work.endTime}
           onChange={(e) => onChange("endTime", e.target.value)}
+          required
         />
       </label>
     </div>
@@ -79,6 +86,7 @@ function EducationInputItem({ education, onChange }) {
           name="school"
           value={education.school}
           onChange={(e) => onChange("school", e.target.value)}
+          required
         />
       </label>
       <label>
@@ -87,6 +95,7 @@ function EducationInputItem({ education, onChange }) {
           name="degree"
           value={education.degree}
           onChange={(e) => onChange("degree", e.target.value)}
+          required
         />
       </label>
       <label>
@@ -95,6 +104,7 @@ function EducationInputItem({ education, onChange }) {
           name="startTime"
           value={education.startTime}
           onChange={(e) => onChange("startTime", e.target.value)}
+          required
         />
       </label>
       <label>
@@ -103,6 +113,7 @@ function EducationInputItem({ education, onChange }) {
           name="endTime"
           value={education.endTime}
           onChange={(e) => onChange("endTime", e.target.value)}
+          required
         />
       </label>
     </div>
