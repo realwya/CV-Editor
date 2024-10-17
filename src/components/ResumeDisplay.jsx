@@ -1,9 +1,11 @@
-function BasicInfo({ name, email, intro }) {
+import "../styles/resumedisplay.css";
+
+function BasicInfo({ name, email, about }) {
   return (
     <div className="basicInfo">
       <p className="name">{name}</p>
       <p className="email">{email}</p>
-      <p className="intro">{intro}</p>
+      <p className="about">{about}</p>
     </div>
   );
 }
@@ -54,12 +56,14 @@ export default function ResumeDisplay({ data }) {
       <BasicInfo
         name={basicInfo.name}
         email={basicInfo.email}
-        intro={basicInfo.intro}
+        about={basicInfo.about}
       />
-      <h1>Work</h1>
-      <ul>{workItems}</ul>
-      <h1>Education</h1>
-      <ul>{educationItems}</ul>
+      <div className="right">
+        <h1 className="sectionTitle">Work Experience</h1>
+        <ul>{workItems}</ul>
+        <h1 className="sectionTitle">Education</h1>
+        <ul>{educationItems}</ul>
+      </div>
     </div>
   );
 }

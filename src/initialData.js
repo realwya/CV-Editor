@@ -2,7 +2,7 @@ const initialData = {
   basicInfo: {
     name: "John Doe",
     email: "12345@gmail.com",
-    intro: "This is a short introduction about me.",
+    about: "This is a short introduction about me.",
   },
   education: [
     {

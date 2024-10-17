@@ -20,11 +20,11 @@ export default function BasicInfoInput({ basicInfo, onChange }) {
         />
       </label>
       <label>
-        Intro:{" "}
+        About:{" "}
         <input
-          name="intro"
-          value={basicInfo.intro}
-          onChange={(e) => onChange("intro", e.target.value)}
+          name="about"
+          value={basicInfo.about}
+          onChange={(e) => onChange("about", e.target.value)}
           required
         />
       </label>
