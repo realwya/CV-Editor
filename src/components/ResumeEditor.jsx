@@ -147,7 +147,7 @@ export default function ResumeEditor({ data, onSubmit }) {
   };
 
   const workInputItems = work.map((work, index) => (
-    <li key={work.id}>
+    <li key={index}>
       <WorkInputItem
         work={work}
         onChange={(field, value) => handleWorkChange(index, field, value)}
@@ -155,7 +155,7 @@ export default function ResumeEditor({ data, onSubmit }) {
     </li>
   ));
   const educationInputItems = education.map((education, index) => (
-    <li key={education.id}>
+    <li key={index}>
       <EducationInputItem
         education={education}
         onChange={(field, value) => handleEducationChange(index, field, value)}
@@ -174,10 +174,12 @@ export default function ResumeEditor({ data, onSubmit }) {
       <section>
         <h1>Work</h1>
         <ul>{workInputItems}</ul>
+        <button className="addWork">Add</button>
       </section>
       <section>
         <h1>Education</h1>
         <ul>{educationInputItems}</ul>
+        <button className="addEducation">Add</button>
       </section>
       <button type="submit">Save</button>
     </form>

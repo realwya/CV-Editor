@@ -6,14 +6,12 @@ const initialData = {
   },
   education: [
     {
-      id: 0,
       school: "UNC Chapel Hill",
       degree: "Master of Information science",
       startTime: "2018",
       endTime: "2020",
     },
     {
-      id: 1,
       school: "SYSU",
       degree: "Bachelor of Psychology",
       startTime: "2012",
@@ -22,7 +20,6 @@ const initialData = {
   ],
   work: [
     {
-      id: 0,
       company: "GAC Design",
       title: "Designer",
       startTime: "2022",
