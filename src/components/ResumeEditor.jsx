@@ -157,6 +157,30 @@ export default function ResumeEditor({ data, onSubmit }) {
     onSubmit(formData);
   };
 
+  const addWork = () => {
+    setData((prev) => ({
+      ...prev,
+      work: prev.work.concat({
+        company: "",
+        title: "",
+        startTime: "",
+        endTime: "",
+      }),
+    }));
+  };
+
+  const addEducation = () => {
+    setData((prev) => ({
+      ...prev,
+      education: prev.education.concat({
+        school: "",
+        degree: "",
+        startTime: "",
+        endTime: "",
+      }),
+    }));
+  };
+
   const workInputItems = work.map((work, index) => (
     <li key={index}>
       <WorkInputItem
@@ -185,12 +209,16 @@ export default function ResumeEditor({ data, onSubmit }) {
       <section>
         <h1>Work</h1>
         <ul>{workInputItems}</ul>
-        <button className="addWork">Add</button>
+        <button className="addWork" type="button" onClick={addWork}>
+          Add
+        </button>
       </section>
       <section>
         <h1>Education</h1>
         <ul>{educationInputItems}</ul>
-        <button className="addEducation">Add</button>
+        <button className="addEducation" type="button" onClick={addEducation}>
+          Add
+        </button>
       </section>
       <button type="submit">Save</button>
     </form>
