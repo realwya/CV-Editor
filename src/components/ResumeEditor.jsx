@@ -169,6 +169,13 @@ export default function ResumeEditor({ data, onSubmit }) {
     }));
   };
 
+  const deleteWork = (i) => {
+    setData((prev) => ({
+      ...prev,
+      work: prev.work.toSpliced(i, 1),
+    }));
+  };
+
   const addEducation = () => {
     setData((prev) => ({
       ...prev,
@@ -181,12 +188,26 @@ export default function ResumeEditor({ data, onSubmit }) {
     }));
   };
 
+  const deleteEducation = (i) => {
+    setData((prev) => ({
+      ...prev,
+      education: prev.education.toSpliced(i, 1),
+    }));
+  };
+
   const workInputItems = work.map((work, index) => (
     <li key={index}>
       <WorkInputItem
         work={work}
         onChange={(field, value) => handleWorkChange(index, field, value)}
       />
+      <button
+        className="deleteWork"
+        type="button"
+        onClick={() => deleteWork(index)}
+      >
+        Remove
+      </button>
     </li>
   ));
   const educationInputItems = education.map((education, index) => (
@@ -195,6 +216,13 @@ export default function ResumeEditor({ data, onSubmit }) {
         education={education}
         onChange={(field, value) => handleEducationChange(index, field, value)}
       />
+      <button
+        className="deleteEducation"
+        type="button"
+        onClick={() => deleteEducation(index)}
+      >
+        Remove
+      </button>
     </li>
   ));
 
